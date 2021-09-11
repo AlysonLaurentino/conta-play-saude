@@ -1,0 +1,292 @@
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+header{
+	background: #65C7FF;
+	padding: 20px 0;
+	width: 100%;
+}
+
+form{
+	margin: 20px  0;
+}
+
+form label{
+	font-size: 18px;
+}
+
+form input, #tipoFJ{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10PX;
+	background: rgb(223, 222, 222);
+	border: none;
+}
+
+form legend{
+	width: 100%;
+}
+
+form#form-adiciona fieldset{
+	display: none;
+}
+
+form#form-adiciona fieldset.active{
+	display: block;
+}
+
+#titulo-form{
+	font-size: 2em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+
+.caixa{
+  position: relative;
+  width: 940px;
+  margin: 0px auto;
+}
+
+h1 .imgLogo{
+	width: 150px;
+	border-radius: 1em;
+}
+
+nav{
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+nav a{
+  text-transform: uppercase;
+  color:white;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fafd35;
+  text-decoration: underline;
+}
+
+.container:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+}
+
+.container{
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+section h2{
+	font-size: 1.5em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+
+section h3{
+	font-size: 1.5em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+
+label{
+	color: #555;
+	display: block;
+	margin-bottom: .2em;
+}
+
+.campo{
+	/* margin: 0;
+	padding-bottom: 1em;
+	width: 50%;
+	padding: .7em;
+	display: inline-block; */
+	display: inline-block;
+	padding-right: .5em;
+	width: 45%;
+}
+
+.campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+}
+
+.grupo{
+	width: 32%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+button{
+	padding: .5em 2em;
+	border: 0;
+	border-bottom: 3px solid;
+	font-size: 1em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -3px;
+	color: #fff;
+	background-color:#0c8cd3;
+	border-color: #04324c;
+	width: 20%;
+    display: block;
+    clear: both;
+    margin: 10px 0px;
+
+}
+
+.botoesForm button{
+	display: inline-block;
+	width: 20%;
+}
+
+button:active{
+	margin-top:0px;
+	border: 0;
+}
+
+ #cadastrarCategoria, #cadastrarProduto, #cadastrarServico, #cadastrarAgendamento,#botao-enviar {
+	width: 150px;
+} 
+
+button[disabled=disabled], button:disabled {
+    background-color: gray;
+	border-color: darkgray;
+
+}
+
+.botoesForm button{
+	display: inline-block;
+	width: 15%;
+}
+
+.campo-invalido{
+	border: 1px solid red;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.invisivel {
+	display: none;
+}
+
+footer{
+    text-align: center;
+    color: white;
+	background:  rgba(19, 170, 230, 0.6);
+	padding: 20px 0;
+    
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing:  border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.produtos li:hover{
+    border-color: #c78c19;
+}
+
+.produtos li:active{
+    border-color: #088c19;
+}
+
+.produtos li:hover h3{
+    font-size: 25px;
+
+}
+
+.produtos h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px ;
+}
+
+footer .imgLogo{
+	width: 150px;
+	border-radius: 1em;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 16px;
+    margin: 20px 0 0;
+}
+
+.active{
+	display: block !important;
+}
+
+.imgApresentacao{
+	width: 100%;
+	margin: 20PX 20PX 20PX 20PX ;
+
+}
+#apresentacao{
+	width: 60%;
+	height: 100%;
+	margin: 20px auto;
+  }
+
+ 
+
+.loja{
+	font-size: 1.5em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+

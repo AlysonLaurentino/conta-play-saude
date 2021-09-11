@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apresentação</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="cadastroCliente.css">
+    </head>
+    
+    <body>
+        <header >
+            <div class="caixa">  
+            <h1 class="h1play"><img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Odonto"></h1>              
+                <nav>
+                    <ul>
+                        <li><a href="HomePlaySaude.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="CadastroLoja.html">Novo Parceiro</a></li>
+                        <li><a href="Lojas.html" id="buscar-lojas" class="botao bto-principal">Loja</a></li>     
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="container">
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                
+              
+                   
+                    <div id="tabela-lojas">
+                        <ul id="teste" > 
+                            <!-- <td class="info-id"></td> -->
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                        </ul>
+                    </div>
+             
+                <!-- <span id="erro-ajax" class="invisivel">Erro ao buscar os clientes</span> -->
+                <!-- <button id="buscar-lojas" class="botao bto-principal">Buscar Lojas</button> -->
+
+            </section>
+    
+                 <script src="buscar-lojas.js"></script>
+        </main>
+
+        <footer>
+            <img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Play Saude">
+            <p class="copyright">&copy;Play Saúde - 2021</p>
+        </footer>
+    </body>
+
+</html>
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apresentação</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="cadastroCliente.css">
+    </head>
+    
+    <body>
+        <header >
+            <div class="caixa">  
+            <h1 class="h1play"><img src="logo2.png" alt="Logo Odonto"></h1>              
+                <nav>
+                    <ul>
+                        <li><a href="login.htm">Login</a></li>
+                        <li><a href="cadastroFun.htm">Cadastro Clientes</a></li>
+                        <li><a href="cadastroMed.htl"></a></li>
+                        <li><a href="index.htm">Relatório</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="container">
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <h2>Cartão </h2>
+                 <form id="form-adiciona"> 
+                     <fieldset id="formulario-1" class="active">
+                       
+                        <div class="campo">
+                            <!-- <label for="nome-completo">Nome Completo</label> -->
+                            <input type="text" id="nome-completo" nome="nome" required placeholder
+                            ="nomecompleto">
+                        </div>
+
+                        <div class="campo">
+                            <!-- <label for="data-nascimento">Data de Nascimento</label> -->
+                            <input type= "date" id="data-nascimento"  required placeholder
+                            ="Dia/Mês/Ano">
+                        </div>
+                    
+                        <div class="campo">
+                            <!-- <label for="cpf">CPF</label> -->
+                            <input type="text" id="cpf"  required placeholder
+                            ="CPF">
+                        </div>
+
+                        <div class="campo">
+                            <!-- <label for="tel">Telefone</label> -->
+                            <input type= "text" id="tel"  required placeholder="Telefone">
+                        </div>
+
+                        <div class="campo">
+                            <!-- <label for="email">Email</label> -->
+                            <input type= "email" id="email"  required placeholder
+                            ="odonto@odonto.com">
+                        </div>
+
+                        <div class="campo">
+                            <input type= "text" id="sexo"  required placeholder
+                            ="Sexo">
+                        </div>
+
+                        <button id="proximo-form">Proximo > </button>
+
+                        </fieldset>
+
+                        <fieldset id="formulario-2">
+                        <ul class="produtos">
+                            <li>
+                                <h3>Família</h3>
+                                <p class="produto-descricao"> 2 dependente</p>
+                                <p class="produto-preco">R$ 15,00</p>
+                            </li>
+                            <li>
+                                <h3>Família+Plus</h3>
+                                <p class="produto-descricao"> 4 dependente</p>
+                                <p class="produto-preco">R$ 20,00</p>
+                            </li>
+                            <li>
+                                <h3>Grátis</h3>
+                                <p class="produto-descricao"> 0 dependente</p>
+                                <p class="produto-preco">R$ 00,00</p>
+                            </li>
+                        </ul>
+
+                        <div class="botoesForm">
+                            <button id="anterior-form">< Anterior  </button>
+                            <!-- <button id="proximo-form">Proximo> </button> -->
+                        </div>
+
+                        </fieldset>
+
+                        <script src="formulario-cadastro.js"></script>
+
+        </main>
+
+        <footer>
+            <img src="logo2.png" alt="Logo OdontoPlay">
+            <p class="copyright">&copy; Saúde+VC - 2021</p>
+        </footer>
+    </body>
+
+</html>

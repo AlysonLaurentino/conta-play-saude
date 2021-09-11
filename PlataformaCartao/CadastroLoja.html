@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apresentação</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="cadastroCliente.css">
+    </head>
+    
+    <body>
+        <header >
+            <div class="caixa">  
+            <h1 class="h1play"><img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Odonto"></h1>              
+                <nav>
+                    <ul>
+                        <li><a href="HomePlaySaude.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="CadastroLoja.html">Novo Parceiro</a></li>
+                        <li><a href="Lojas.html">Loja</a></li>       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="container">
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <h2>Loja </h2>
+
+        
+                
+                 <form id="form-adiciona"> 
+
+
+                        <div class="campo">
+                          <p>Importe Arquivo:</p>
+                          <input id="arquivos" type="file" name="arquivo"/>
+                        </div>
+
+                        <div class="campo">
+                            <input type="text" id="fantasia"  required placeholder
+                            ="nome da empresa">
+                        </div>
+
+                        <div class="campo">
+                            <input type="text" id="categoria"  required placeholder
+                            ="categoria">
+                        </div>
+
+                        <div class="campo">
+                            <input type= "text" id="funcionamento"  required placeholder
+                            ="Funcionamento">
+                        </div>
+
+                        <div class="campo">
+                            <input  type="number" min="1" step="any" id="precoConsulta" required placeholder
+                            ="Preço da Consulta">
+                        </div>
+
+                        <h2>Endereço</h2>
+                            <div class="campo">
+                                <input type= "text" id="logradouro"  required placeholder
+                                ="rua/Av">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="bairro"  required placeholder
+                                ="bairro">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="numero"  required placeholder
+                                ="numero">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="municipio"  required placeholder
+                                ="cidade">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="complemento"  required placeholder
+                                ="complemento">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="uf"  required placeholder
+                                ="UF">
+                            </div>
+
+                            <div class="campo">
+                                <input type= "text" id="cep"  required placeholder
+                                ="CEP">
+                            </div>
+
+                            <h2>Telefone</h2>
+                           
+                            <div class="campo">
+                                <label for="tel"></label>
+                                <input type= "text" id="tel"  required placeholder="Telefone">
+                            </div>
+
+                            <div class="campo">
+                                <label for="eWhatsApp">É WhatsApp?</label>
+                                 <select id= "eWhatsApp" >
+                                  <!-- /  <option selected disabled value="">Selecione</option> -->
+                                  <option>NAO</option>  
+                                  <option>SIM</option>
+                                   
+                                </select>
+                             </div>
+
+                             <div class="botoesForm">
+                                <button id="botao-enviar">Enviar</button>
+                            </div> 
+                 </form>
+            </section>
+                 <script src="GerenciadorLoja.js"></script>
+        </main>
+
+        <footer>
+            <img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Play Saude">
+            <p class="copyright">&copy;Play Saúde - 2021</p>
+        </footer>
+    </body>
+
+</html>
+
