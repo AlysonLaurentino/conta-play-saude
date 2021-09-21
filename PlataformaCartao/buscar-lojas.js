@@ -19,7 +19,7 @@ buscarlojas.addEventListener("click",async function(event) {
     headers: { Authorization: tokenRecuperado}
     };
 
-    axios.get("http://www.playsaude.com.br/:8080/loja", config)
+    axios.get("http://www.playsaude.com.br:8080/loja", config)
     .then(lojasDados => {
 
     var dado = lojasDados.data;
@@ -51,7 +51,7 @@ buscarlojas.addEventListener("click",async function(event) {
         lojaUL.classList.add("loja");
 
         var imagem = document.createElement("img");
-        imagem.src= "http://www.playsaude.com.br/:8080//dawlond/"+loja.nomeFotoLogo;
+        imagem.src= "http://www.playsaude.com.br:8080//dawlond/"+loja.nomeFotoLogo;
 
         var informacao = document.createElement("div");
         informacao.className="bloco";

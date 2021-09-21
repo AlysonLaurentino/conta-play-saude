@@ -18,7 +18,7 @@ buscar.addEventListener("click",async function(event) {
     };
 
   
-    axios.get("http://www.playsaude.com.br/:8080/parceria", config)
+    axios.get("http://www.playsaude.com.br:8080/parceria", config)
     .then(parceriaDados => { 
 
         var dado = parceriaDados.data;
@@ -50,7 +50,7 @@ buscar.addEventListener("click",async function(event) {
         parceriaUL.classList.add("parceria");
 
         var imagem = document.createElement("img");
-        imagem.src= "http://localhost:8080/dawlond/"+parceria.nomeFotoLogo;
+        imagem.src= "hhttp://www.playsaude.com.br:8080/dawlond/"+parceria.nomeFotoLogo;
         console.log(parceria.nomeFotoLogo);
 
 
