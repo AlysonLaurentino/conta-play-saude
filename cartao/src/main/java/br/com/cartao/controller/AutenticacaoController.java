@@ -18,7 +18,7 @@ import br.com.cartao.form.LoginForm;
 import br.com.cartao.security.TokenService;
 
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/auth")
 public class AutenticacaoController {

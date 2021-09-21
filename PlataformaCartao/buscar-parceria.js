@@ -18,7 +18,7 @@ buscar.addEventListener("click",async function(event) {
     };
 
   
-    axios.get("http://localhost:8080/parceria", config)
+    axios.get("http://www.playsaude.com.br/:8080/parceria", config)
     .then(parceriaDados => { 
 
         var dado = parceriaDados.data;

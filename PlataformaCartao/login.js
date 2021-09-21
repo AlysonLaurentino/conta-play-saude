@@ -7,7 +7,7 @@ botaoEnviar.addEventListener("click",async function(event) {
     var loginForm = obtemLoginDoFormulario(form);
  
     try{
-    var token = await axios.post("http://localhost:8080/auth", loginForm);
+    var token = await axios.post("http://www.playsaude.com.br/:8080/auth", loginForm);
     var dado = token.data;
 
     var somaToken= dado.tipo+" "+dado.token;

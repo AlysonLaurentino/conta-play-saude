@@ -21,7 +21,7 @@ botaoEnviar.addEventListener("click",async function(event) {
     formData.append("foto", foto);
 
     
-    fetch('http://localhost:8080/parceria', {
+    fetch('http://www.playsaude.com.br/:8080/parceria', {
             method: 'POST',
             body: formData,
             headers: new Headers({
