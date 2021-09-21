@@ -1,43 +1,101 @@
 var buscarlojas = document.querySelector("#buscar-lojas");
-var tabelas = document.querySelector("#tabela-lojas");
-var logo = document.querySelector("#logolojas");
+var tabelas = document.querySelector("#tabela-loja");
+
 
 
 buscarlojas.addEventListener("click",async function(event) {
     event.preventDefault();
 
     tabelas.innerHTML= "";
+
+    var tokenRecuperado =  localStorage.getItem("TokenPlaySaude");
    
-    var lojasDados = await axios.get("http://localhost:8080/loja");
+   if(tokenRecuperado == null){
+    window.location.href = "login.html";
+
+   }
+
+   const config = {
+    headers: { Authorization: tokenRecuperado}
+    };
+
+    axios.get("http://localhost:8080/loja", config)
+    .then(lojasDados => {
+
     var dado = lojasDados.data;
 
     var Lojas = dado;
-    console.log(Lojas);    
     
      Lojas.forEach(function(loja){
 
     adicionaNoBloco(loja);
-
-  
     
     });
 
+    }).catch(erro => {
+    console.log(erro);
+    if(erro.response.status === 403){
+        localStorage.removeItem("TokenPlaySaude");
+        window.location.href = "login.html";
+
+    }
+    })
+
+
     function montaUL(loja){
+
+        var endereco = loja.endereco.logradouro+", "+loja.endereco.numero+", "+loja.endereco.cep+", "+loja.endereco.bairro+", "+
+        loja.endereco.municipio+"-"+loja.endereco.uf+"."
        
         var lojaUL = document.createElement("ul");
         lojaUL.classList.add("loja");
 
         var imagem = document.createElement("img");
         imagem.src= "http://localhost:8080/dawlond/"+loja.nomeFotoLogo;
+
+        var informacao = document.createElement("div");
+        informacao.className="bloco";
     
-        lojaUL.appendChild(montali(loja.nomeFantasia, "info-padrao"));
-        lojaUL.appendChild(montali(loja.funcionamento, "info-padrao"));
-        lojaUL.appendChild(montali(loja.precoConsulta, "info-padrao"));
-       // lojaUL.appendChild(montali(loja.endereco, "info-padrao"));
-      //  lojaUL.appendChild(montali(loja.categorias, "info-padrao"));
-      //  lojaUL.appendChild(montali(loja.telefones, "info-padrao"));
-        lojaUL.appendChild(imagem);
-       // lojaTr.appendChild(montaTd(loja.precoConsulta, "info-padrao"));
+        informacao.appendChild(montali(loja.nomeFantasia, "nomeFantasia"));
+        informacao.appendChild(montali(loja.descricaoPromocao, "descricaoPromocao"));
+        informacao.appendChild(montali("Endereço "+ endereco, "endereco"));
+        informacao.appendChild(montali("Horario de Funcionamento "+ loja.funcionamento, "funcionamento"));
+       
+        var todosTelefones = [];
+
+        loja.telefones.forEach(telefone => {
+
+
+            var tel = "("+telefone.dd+") "+telefone.numero+" "
+
+            todosTelefones.push(tel);
+
+        })
+
+        informacao.appendChild(montali("Telefone: "+todosTelefones.join(" | "), "telefone"));
+
+
+        var todasCategorias = [];
+
+        loja.categorias.forEach(categoria => {
+
+            todasCategorias.push(categoria);
+        
+        })
+
+        informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
+
+        var imagemBloco= document.createElement("div");
+        imagemBloco.className="bloco";
+
+        imagemBloco.appendChild(imagem);
+
+        var linhaBloco = document.createElement("div");
+        linhaBloco.className="linha-horizontal";
+        linhaBloco.appendChild(imagemBloco);
+        linhaBloco.appendChild(informacao);
+
+        lojaUL.appendChild(linhaBloco);
 
         return  lojaUL;
     }
@@ -52,36 +110,10 @@ buscarlojas.addEventListener("click",async function(event) {
 
     function adicionaNoBloco(loja) {
         var lojaUL = montaUL(loja);
-        var bloco = document.querySelector("#tabela-lojas");
+        var bloco = document.querySelector("#tabela-loja");
         bloco.appendChild(lojaUL);
     }
 
-    function montaTr(loja) {
-       
-        var lojaTr = document.createElement("tr");
-        lojaTr.classList.add("loja");
-    
-        lojaTr.appendChild(montaTd(loja.nomeFantasia, "info-padrao"));
-        lojaTr.appendChild(montaTd(loja.funcionamento, "info-padrao"));
-       // lojaTr.appendChild(montaTd(loja.precoConsulta, "info-padrao"));
-
-        return  lojaTr;
-    }
-    
-    function montaTd(dado, classe) {
-        var td = document.createElement("td");
-        td.classList.add(classe);
-        td.textContent = dado;
-    
-        return td;
-    }
-
-    function adicionaNaTabela(loja) {
-        var lojaTr = montaTr(loja);
-        var tabela = document.querySelector("#tabela-lojas");
-        tabela.appendChild(lojaTr);
-    }
-
-
+   
 
 });

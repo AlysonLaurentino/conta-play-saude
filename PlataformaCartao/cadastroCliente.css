@@ -282,11 +282,43 @@ footer .imgLogo{
 
  
 
-.loja{
+/* .loja{
 	font-size: 1.5em;
 	display: block;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 20px;
+} */
+
+.linha-horizontal{
+	display: inline-flex;
+	font-size: 1em;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+	
+
 }
 
+.linha-horizontal img{
+	height: 120px;
+	width: 120px;
+	margin-right: 10px;
+}
+
+.nomeFantasia{
+	font-size: 2em;
+	margin-bottom: 8px;
+}
+
+
+.descricaoPromocao{
+	font-size: 1.5em;
+	margin-bottom: 8px;
+
+}
+
+#categoria{
+	margin-bottom: 8px;
+
+}

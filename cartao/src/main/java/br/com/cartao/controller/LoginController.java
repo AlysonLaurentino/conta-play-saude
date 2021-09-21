@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import br.com.cartao.form.LoginForm;
 import br.com.cartao.model.Login;
 import br.com.cartao.repository.LoginRepository;
 
@@ -30,7 +32,7 @@ public class LoginController {
 	@Autowired
 	LoginRepository loginRepository;
 
-	//@GetMapping
+	@GetMapping
 	public List<Login> listarLojas() {
 
 		List<Login> login = loginRepository.findAll();
@@ -41,7 +43,9 @@ public class LoginController {
 
 	@PostMapping
 	@Transactional
-	public ResponseEntity<Login> Cadastar(@RequestBody Login login, UriComponentsBuilder uribuilBuilder) {
+	public ResponseEntity<Login> Cadastar(@RequestBody LoginForm form, UriComponentsBuilder uribuilBuilder) {
+
+		Login login = form.converter();
 
 		loginRepository.save(login);
 
@@ -51,7 +55,8 @@ public class LoginController {
 
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<Login> atualizar(@PathVariable Long id, @RequestBody Login login) {
+	public ResponseEntity<Login> atualizar(@PathVariable Long id, @RequestBody LoginForm form) {
+		Login login = form.converter();
 		Optional<Login> loginOptional = loginRepository.findById(id);
 		if (loginOptional.isPresent()) {
 			Login login2 = login.atualizar(id, loginRepository, login);

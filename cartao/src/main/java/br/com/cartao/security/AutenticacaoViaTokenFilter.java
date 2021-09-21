@@ -42,7 +42,7 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter {
 		Long idLongSistema = tokenService.getIdLong(token);
 		Login login = Loginrepository.findById(idLongSistema).get();
 		UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(login, null,
-				login.getAuthorities());
+				null);//login.getAuthorities() colocar no lugar do ultimo null
 
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 

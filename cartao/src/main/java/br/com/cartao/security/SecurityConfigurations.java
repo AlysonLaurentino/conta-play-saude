@@ -45,13 +45,18 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				 .antMatchers("/loja").permitAll()
-				.antMatchers("/login").permitAll()
+//				.antMatchers("/loja").permitAll()
+//				.antMatchers("/login").permitAll()
+//				//.antMatchers("/parceria").permitAll()
+//				.antMatchers("/dawlond").permitAll()
+//				.antMatchers("/auth").permitAll()
+//				.antMatchers("/dawlond/{someID}").permitAll()
+
+				
 				//// .and().csrf().disable().headers().frameOptions().disable()
 				.anyRequest().authenticated().and().cors().and().csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-				.addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, loginRepository),
-						UsernamePasswordAuthenticationFilter.class);
+				.addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, loginRepository),UsernamePasswordAuthenticationFilter.class);
 
 	}
 

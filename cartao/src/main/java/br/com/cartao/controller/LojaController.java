@@ -79,30 +79,13 @@ public class LojaController {
 		ObjectMapper mapper = new ObjectMapper();
 		LojaForm lojaMapper = mapper.readValue(lojaForm, LojaForm.class);
 		Loja lojaOficial = lojaMapper.converter();
+		if(foto!=null) {
 		lojaOficial.setNomeFotoLogo(foto.getOriginalFilename());
-		lojaRepository.save(lojaOficial);
 		uploadArquivo.salvar(foto);
-
-//		try {
-//			LojaForm lojaForm = mapper.readValue(loja, LojaForm.class);
-//			Loja lojaOficial = lojaForm.converter();
-//			lojaRepository.save(lojaOficial);
-//			uploadArquivo.saveFoto(foto);
-//		} catch (IOException e) {
-//			return ResponseEntity.badRequest().body("Não foi possível ler o json");
-//		}
+		}
+		lojaRepository.save(lojaOficial);
 
 		return ResponseEntity.ok("Deu certo!");
-
-		// uploadArquivo.saveFoto(arquivo.getFoto());
-		// Loja loja = arquivo.getLoja().converter();
-		/*
-		 * lojaRepository.save(loja);
-		 * 
-		 * URI uri =
-		 * uribuilBuilder.path("/loja/{id}").buildAndExpand(loja.getId()).toUri();
-		 * return ResponseEntity.created(uri).body(loja);
-		 */
 
 	}
 

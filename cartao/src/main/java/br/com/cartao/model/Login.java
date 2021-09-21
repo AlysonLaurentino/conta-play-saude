@@ -2,6 +2,7 @@ package br.com.cartao.model;
 
 import java.util.ArrayList;
 
+
 import java.util.Collection;
 
 import java.util.List;
@@ -13,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -118,18 +118,12 @@ public class Login implements UserDetails {
 
 	public Login atualizar(Long id2, LoginRepository loginRepository, Login Login) {
 		Login login1 = loginRepository.getById(id2);
-
+///criptogrfar ao alterar a senha / já alterei verificar se ta de boa no BD ao fazer a alterarção
 		login1.setEmail(email);
 		login1.setSenha(senha);
 		login1.setPerfils(perfils);
 
 		return login1;
 	}
-	
-	public UsernamePasswordAuthenticationToken converterLogin() {
-
-		return new UsernamePasswordAuthenticationToken(email, senha);
-	}
-
 
 }

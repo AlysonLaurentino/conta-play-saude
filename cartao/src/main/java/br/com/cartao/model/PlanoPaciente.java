@@ -1,7 +1,6 @@
 package br.com.cartao.model;
 
 import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -58,8 +57,6 @@ public class PlanoPaciente {
 		}
 
 	}
-
-	@SuppressWarnings("unused")
 	private void CalculaDateFim() {
 		this.dataFim = dataInicio.plusMonths(plano.getDuracao());
 	}

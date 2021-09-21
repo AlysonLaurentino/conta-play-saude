@@ -21,7 +21,7 @@ public class Loja {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nomeFantasia;
-	private double precoConsulta;
+	private String descricaoPromocao;
 	private String funcionamento;
 	private String nomeFotoLogo;
 	@Enumerated(EnumType.STRING)
@@ -37,10 +37,10 @@ public class Loja {
 
 	}
 
-	public Loja(String nomeFantasia, double precoConsulta, String funcionamento, Endereco endereco,
+	public Loja(String nomeFantasia, String precoConsulta, String funcionamento, Endereco endereco,
 			List<Categoria> categorias, List<Telefone> telefones) {
 		this.nomeFantasia = nomeFantasia;
-		this.precoConsulta = precoConsulta;
+		this.descricaoPromocao = precoConsulta;
 		this.funcionamento = funcionamento;
 		this.endereco = endereco;
 		this.categorias = categorias;
@@ -89,12 +89,12 @@ public class Loja {
 		this.categorias = categorias;
 	}
 
-	public double getPrecoConsulta() {
-		return precoConsulta;
+	public String getPrecoConsulta() {
+		return descricaoPromocao;
 	}
 
-	public void setPrecoConsulta(double precoConsulta) {
-		this.precoConsulta = precoConsulta;
+	public void setPrecoConsulta(String precoConsulta) {
+		this.descricaoPromocao = precoConsulta;
 	}
 
 	public String getFuncionamento() {

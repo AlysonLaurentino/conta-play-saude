@@ -2,29 +2,31 @@ package br.com.cartao.dto;
 
 import java.util.List;
 
-import br.com.cartao.model.Categoria;
+import br.com.cartao.model.CategoriaParceiro;
 import br.com.cartao.model.Endereco;
-import br.com.cartao.model.Loja;
+import br.com.cartao.model.Parceria;
 import br.com.cartao.model.Telefone;
 
-public class LojaDto {
+public class ParceriaDto {
 
 	private String nomeFantasia;
 	private String descricaoPromocao;
 	private String funcionamento;
 	private String nomeFotoLogo;
 	private Endereco endereco;
-	private List<Categoria> categorias;
+	private List<CategoriaParceiro> categorias;
 	private List<Telefone> telefones;
 
-	public LojaDto(Loja loja) {
-		this.nomeFantasia = loja.getNomeFantasia();
-		this.descricaoPromocao = loja.getPrecoConsulta();
-		this.funcionamento = loja.getFuncionamento();
-		this.nomeFotoLogo = loja.getNomeFotoLogo();
-		this.endereco = loja.getEndereco();
-		this.telefones = loja.getTelefones();
-		this.categorias = loja.getCategorias();
+	public ParceriaDto(Parceria parceria) {
+
+		this.nomeFantasia = parceria.getNomeFantasia();
+		this.descricaoPromocao = parceria.getDescricaoPromocao();
+		this.funcionamento = parceria.getFuncionamento();
+		this.nomeFotoLogo = parceria.getNomeFotoLogo();
+		this.endereco = parceria.getEndereco();
+		this.telefones = parceria.getTelefones();
+		this.categorias = parceria.getCategorias();
+
 	}
 
 	public String getNomeFantasia() {
@@ -35,12 +37,12 @@ public class LojaDto {
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	public String getPrecoConsulta() {
+	public String getDescricaoPromocao() {
 		return descricaoPromocao;
 	}
 
-	public void setPrecoConsulta(String precoConsulta) {
-		this.descricaoPromocao = precoConsulta;
+	public void setDescricaoPromocao(String descricaoPromocao) {
+		this.descricaoPromocao = descricaoPromocao;
 	}
 
 	public String getFuncionamento() {
@@ -67,11 +69,11 @@ public class LojaDto {
 		this.endereco = endereco;
 	}
 
-	public List<Categoria> getCategorias() {
+	public List<CategoriaParceiro> getCategorias() {
 		return categorias;
 	}
 
-	public void setCategorias(List<Categoria> categorias) {
+	public void setCategorias(List<CategoriaParceiro> categorias) {
 		this.categorias = categorias;
 	}
 
@@ -82,7 +84,5 @@ public class LojaDto {
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
 	}
-	
-	
 
 }

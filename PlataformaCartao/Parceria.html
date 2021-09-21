@@ -10,7 +10,7 @@
     <body>
         <header >
             <div class="caixa">  
-            <h1 class="h1play"><img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Play Saúde"></h1>              
+            <h1 class="h1play"><img class="imgLogo" src="LogoPlay6.jpg" alt="Logo Play Sáude"></h1>              
                 <nav>
                     <ul>
                         <li><a href="HomePlaySaude.html">Home</a></li>
@@ -28,27 +28,24 @@
 
             <section class="container">
                 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-                 <form id="form-adiciona"> 
-                   
-                    <h2>Login</h2>
-                        <div class="campo">
-                                <label for="email">Email</label>
-                                <input type= "email" id="email"  required placeholder
-                                ="odonto@odonto.com">
-                        </div>
-                        <div class="campo">
-                                 <label for="senha">Senha</label>
-                                <input type= "password" id="senha"  required placeholder
-                                    ="senha">
-                        </div>    
+               
+                    <div id="tabela-parcerias">
+                        <ul id="teste" > 
+                            <li class="nomeFantasia"></li>
+                            <li class="descricaoPromocao"></li>
+                            <li class="endereco"></li>
+                            <li class="telefone"></li>
+                            <li class="info-padrao"></li>
+                            <li class="info-padrao"></li>
+                        </ul>
+                    </div>
+             
+                <!-- <span id="erro-ajax" class="invisivel">Erro ao buscar os clientes</span> -->
+                <!-- <button id="buscar-lojas" class="botao bto-principal">Buscar Lojas</button> -->
 
-
-                        <div class="botoesForm">
-                            <button id="botao-enviar">Entrar</button>
-                        </div> 
-                 </form>
             </section>
-                 <script src="login.js"></script>
+    
+                 <script src="buscar-parceria.js"></script>
         </main>
 
         <footer>
