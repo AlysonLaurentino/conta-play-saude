@@ -37,10 +37,10 @@ public class Loja {
 
 	}
 
-	public Loja(String nomeFantasia, String precoConsulta, String funcionamento, Endereco endereco,
+	public Loja(String nomeFantasia, String descricaoPromocao, String funcionamento, Endereco endereco,
 			List<Categoria> categorias, List<Telefone> telefones) {
 		this.nomeFantasia = nomeFantasia;
-		this.descricaoPromocao = precoConsulta;
+		this.descricaoPromocao = descricaoPromocao;
 		this.funcionamento = funcionamento;
 		this.endereco = endereco;
 		this.categorias = categorias;
