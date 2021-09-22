@@ -33,11 +33,11 @@ public class LojaForm {
 		Loja loja = lojaRepository.getById(id);
 
 		loja.setNomeFantasia(form.nomeFantasia);
-		loja.setPrecoConsulta(form.descricaoPromocao);
+		loja.setDescricaoPromocao(form.descricaoPromocao);
 		loja.setFuncionamento(form.funcionamento);
 		loja.setEndereco(form.endereco);
 		loja.setCategorias(form.categorias);
-		//loja.setTelefones(form.telefones);
+		// loja.setTelefones(form.telefones);
 
 		return loja;
 	}
@@ -50,12 +50,12 @@ public class LojaForm {
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	public String getPrecoConsulta() {
+	public String getDescricaoPromocao() {
 		return descricaoPromocao;
 	}
 
-	public void setPrecoConsulta(String precoConsulta) {
-		this.descricaoPromocao = precoConsulta;
+	public void setDescricaoPromocao(String descricaoPromocao) {
+		this.descricaoPromocao = descricaoPromocao;
 	}
 
 	public String getFuncionamento() {
@@ -89,7 +89,5 @@ public class LojaForm {
 	public void setTelefonesForm(List<TelefoneForm> telefonesForm) {
 		this.telefonesForm = telefonesForm;
 	}
-
-	
 
 }

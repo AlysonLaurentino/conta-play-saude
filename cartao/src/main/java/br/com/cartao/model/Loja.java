@@ -57,20 +57,36 @@ public class Loja {
 		this.nomeFantasia = nomeFantasia;
 	}
 
+	public String getDescricaoPromocao() {
+		return descricaoPromocao;
+	}
+
+	public void setDescricaoPromocao(String descricaoPromocao) {
+		this.descricaoPromocao = descricaoPromocao;
+	}
+
+	public String getFuncionamento() {
+		return funcionamento;
+	}
+
+	public void setFuncionamento(String funcionamento) {
+		this.funcionamento = funcionamento;
+	}
+
+	public String getNomeFotoLogo() {
+		return nomeFotoLogo;
+	}
+
+	public void setNomeFotoLogo(String nomeFotoLogo) {
+		this.nomeFotoLogo = nomeFotoLogo;
+	}
+
 	public StatusLoja getStatusLoja() {
 		return statusLoja;
 	}
 
 	public void setStatusLoja(StatusLoja statusLoja) {
 		this.statusLoja = statusLoja;
-	}
-
-	public List<Telefone> getTelefones() {
-		return telefones;
-	}
-
-	public void setTelefones(List<Telefone> telefones) {
-		this.telefones = telefones;
 	}
 
 	public Endereco getEndereco() {
@@ -89,34 +105,21 @@ public class Loja {
 		this.categorias = categorias;
 	}
 
-	public String getPrecoConsulta() {
-		return descricaoPromocao;
+	public List<Telefone> getTelefones() {
+		return telefones;
 	}
 
-	public void setPrecoConsulta(String precoConsulta) {
-		this.descricaoPromocao = precoConsulta;
-	}
-
-	public String getFuncionamento() {
-		return funcionamento;
-	}
-
-	public void setFuncionamento(String funcionamento) {
-		this.funcionamento = funcionamento;
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
 	}
 
 	public Long getId() {
 		return id;
 	}
-
-	public String getNomeFotoLogo() {
-		return nomeFotoLogo;
-	}
-
-	public void setNomeFotoLogo(String nomeFotoLogo) {
-		this.nomeFotoLogo = nomeFotoLogo;
-	}
 	
+	
+	
+
 	
 
 
