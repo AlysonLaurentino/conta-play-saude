@@ -2,12 +2,12 @@ var botaoEnviar = document.querySelector("#botao-enviar");
 botaoEnviar.addEventListener("click",async function(event) {
     event.preventDefault();
 
-    // var tokenRecuperado =  localStorage.getItem("TokenPlaySaude");
+    var tokenRecuperado =  localStorage.getItem("TokenPlaySaude");
    
-//    if(tokenRecuperado == null){
-//     window.location.href = "login.html";
+   if(tokenRecuperado == null){
+    window.location.href = "login.html";
 
-//    }
+   }
 
     var foto = document.querySelector("#arquivos").files[0];
 
@@ -23,9 +23,9 @@ botaoEnviar.addEventListener("click",async function(event) {
     fetch('http://www.playsaude.com.br:8080/loja', {
             method: 'POST',
             body: formData,
-            // headers: new Headers({
-            //     'Authorization': tokenRecuperado, 
-            //   }) 
+            headers: new Headers({
+                'Authorization': tokenRecuperado, 
+              }) 
         })
         .then(response => {
             if(!response.ok)
