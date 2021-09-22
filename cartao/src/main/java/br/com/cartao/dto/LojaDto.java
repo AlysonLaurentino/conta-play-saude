@@ -19,7 +19,7 @@ public class LojaDto {
 
 	public LojaDto(Loja loja) {
 		this.nomeFantasia = loja.getNomeFantasia();
-		this.descricaoPromocao = loja.getPrecoConsulta();
+		this.descricaoPromocao = loja.getDescricaoPromocao();
 		this.funcionamento = loja.getFuncionamento();
 		this.nomeFotoLogo = loja.getNomeFotoLogo();
 		this.endereco = loja.getEndereco();
@@ -35,12 +35,12 @@ public class LojaDto {
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	public String getPrecoConsulta() {
+	public String getDescricaoPromocao() {
 		return descricaoPromocao;
 	}
 
-	public void setPrecoConsulta(String precoConsulta) {
-		this.descricaoPromocao = precoConsulta;
+	public void setDescricaoPromocao(String descricaoPromocao) {
+		this.descricaoPromocao = descricaoPromocao;
 	}
 
 	public String getFuncionamento() {
@@ -82,6 +82,7 @@ public class LojaDto {
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
 	}
+
 	
 	
 
