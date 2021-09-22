@@ -28,6 +28,8 @@ public class LoginForm {
 
 	public Login converter() {
 		String senhaCript = new BCryptPasswordEncoder().encode(senha);
+		
+		System.out.println(senhaCript);
 
 		return new Login(email, senhaCript);
 	}

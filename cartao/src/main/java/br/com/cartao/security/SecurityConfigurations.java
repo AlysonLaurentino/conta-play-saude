@@ -46,12 +46,13 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/auth").permitAll()
-//				.antMatchers("/loja").permitAll()
+				.antMatchers("/loja").permitAll()
 				.antMatchers("/login").permitAll()
-//				//.antMatchers("/parceria").permitAll()
-//				.antMatchers("/dawlond").permitAll()
-//				.antMatchers("/auth").permitAll()
-//				.antMatchers("/dawlond/{someID}").permitAll()
+				.antMatchers("/loginTeste").permitAll()
+                .antMatchers("/parceria").permitAll()
+				.antMatchers("/dawlond").permitAll()
+				.antMatchers("/auth").permitAll()
+				.antMatchers("/dawlond/{someID}").permitAll()
 
 				
 				//// .and().csrf().disable().headers().frameOptions().disable()
