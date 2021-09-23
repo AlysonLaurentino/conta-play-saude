@@ -20,7 +20,7 @@ botaoEnviar.addEventListener("click",async function(event) {
     formData.append("lojaForm", JSON.stringify(loja));
     formData.append("foto", foto);
 
-    fetch('http://www.playsaude.com.br:8080/loja', {
+    fetch("http://www.playsaude.com.br:8080/loja", {
             method: 'POST',
             body: formData,
             headers: new Headers({
@@ -60,7 +60,7 @@ function obtemLojaDoFormulario(form) {
         })
     }
     
-    var loja = {
+    var loja = { 
 
                 nomeFantasia: form.fantasia.value,
                 funcionamento:form.funcionamento.value,

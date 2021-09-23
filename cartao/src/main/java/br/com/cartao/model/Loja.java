@@ -3,6 +3,7 @@ package br.com.cartao.model;
 import java.util.List;
 
 
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -32,6 +33,7 @@ public class Loja {
 	private List<Categoria> categorias;
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	private List<Telefone> telefones;
+	
 
 	public Loja() {
 

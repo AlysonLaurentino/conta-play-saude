@@ -2,6 +2,7 @@ package br.com.cartao.dto;
 
 import java.util.List;
 
+
 import br.com.cartao.model.Categoria;
 import br.com.cartao.model.Endereco;
 import br.com.cartao.model.Loja;
