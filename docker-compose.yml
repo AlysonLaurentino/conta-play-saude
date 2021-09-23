@@ -15,7 +15,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: "1234567890"
-      MYSQL_DATABASE: "saudecartao3"
+      MYSQL_DATABASE: "saudecartao4"
     ports:
       - "3306:3306"
     volumes:
