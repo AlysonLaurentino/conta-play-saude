@@ -15,7 +15,7 @@ public class UploadArquivo {
 	
 
 	//@Value("${raiz}")
-	private String raiz = "~/PlaySaude";
+	private String raiz = "/home/alysonsobrinho40/PlaySaude";
 	
 	//@Value("${diretorio}")
 	private String diretorio = "/PlayFoto";
