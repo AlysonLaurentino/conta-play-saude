@@ -29,6 +29,7 @@ buscar.addEventListener("click",async function(event) {
 
     adicionaNoBloco(parceria);
     
+    
     });
 
     }).catch(erro => {
@@ -38,6 +39,7 @@ buscar.addEventListener("click",async function(event) {
             window.location.href = "login.html";
 
         }
+
     })
     
 

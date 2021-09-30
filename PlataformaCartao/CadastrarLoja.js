@@ -25,6 +25,7 @@ botaoEnviar.addEventListener("click",async function(event) {
             body: formData,
             headers: new Headers({
                 'Authorization': tokenRecuperado, 
+                
               }) 
         })
         .then(response => {
@@ -35,9 +36,8 @@ botaoEnviar.addEventListener("click",async function(event) {
         })
         .then(data => alert(data))
 
-    }
-
- );
+        form.reset();
+    });
 
 function obtemLojaDoFormulario(form) {
 

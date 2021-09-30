@@ -77,17 +77,16 @@ buscarlojas.addEventListener("click",async function(event) {
         informacao.appendChild(montali("Telefone: "+todosTelefones.join(" | "), "telefone"));
 
 
-        var todasCategorias = [];
+        // var todasCategorias = [];
 
-        loja.categorias.forEach(categoria => {
+        // loja.categorias.forEach(categoria => {
 
-            if(categoria!=null){
-            todasCategorias.push(categoria);
-            }
-        
-        })
+        //     if(categoria!=null){
+        //     todasCategorias.push(categoria);
+        //     }
+        // })
 
-        informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
+        // informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
 
         var imagemBloco= document.createElement("div");
         imagemBloco.className="bloco";
