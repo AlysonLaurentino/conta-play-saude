@@ -50,8 +50,9 @@ buscar.addEventListener("click",async function(event) {
         parceriaUL.classList.add("parceria");
 
         var imagem = document.createElement("img");
-        imagem.src= "hhttp://www.playsaude.com.br:8080/dawlond/"+parceria.nomeFotoLogo;
-        console.log(parceria.nomeFotoLogo);
+       // imagem.src= "hhttp://www.playsaude.com.br:8080/dawlond/"+parceria.nomeFotoLogo;
+       imagem.src = "Playnasparcerias.jpg";
+
 
 
         var informacao = document.createElement("div");
@@ -65,10 +66,11 @@ buscar.addEventListener("click",async function(event) {
 
         parceria.telefones.forEach(telefone => {
 
-
-            var tel = "("+telefone.dd+") "+telefone.numero+" "
-
-            todosTelefones.push(tel);
+            if(telefone.dd != null && telefone.numero != null){
+                var tel = "("+telefone.dd+") "+telefone.numero+" "
+        
+                todosTelefones.push(tel);
+                }    
 
         
         })

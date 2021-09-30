@@ -66,10 +66,11 @@ buscarlojas.addEventListener("click",async function(event) {
 
         loja.telefones.forEach(telefone => {
 
-
+            if(telefone.dd != null && telefone.numero != null){
             var tel = "("+telefone.dd+") "+telefone.numero+" "
-
+    
             todosTelefones.push(tel);
+            }
 
         })
 
@@ -80,7 +81,9 @@ buscarlojas.addEventListener("click",async function(event) {
 
         loja.categorias.forEach(categoria => {
 
+            if(categoria!=null){
             todasCategorias.push(categoria);
+            }
         
         })
 
