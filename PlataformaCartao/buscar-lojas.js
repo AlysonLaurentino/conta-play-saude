@@ -54,8 +54,12 @@ buscarlojas.addEventListener("click",async function(event) {
         //imagem.src= "http://www.playsaude.com.br:8080/dawlond/"+loja.nomeFotoLogo;
         imagem.src = "Playnasaude1.jpg";
 
-        var informacao = document.createElement("div");
+        var informacaoTel = document.createElement("div");
         informacao.className="bloco";
+
+        var informacaoCategoria = document.createElement("div");
+        informacao.className="bloco";
+    
     
         informacao.appendChild(montali(loja.nomeFantasia, "nomeFantasia"));
         informacao.appendChild(montali(loja.descricaoPromocao, "descricaoPromocao"));
@@ -74,7 +78,7 @@ buscarlojas.addEventListener("click",async function(event) {
 
         })
 
-        informacao.appendChild(montali("Telefone: "+todosTelefones.join(" | "), "telefone"));
+        informacaoTel.appendChild(montali("Telefone: "+todosTelefones.join(" | "), "telefone"));
 
 
         var todasCategorias = [];
@@ -87,7 +91,7 @@ buscarlojas.addEventListener("click",async function(event) {
         
         })
 
-        informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
+        informacaoCategoria.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
 
         var imagemBloco= document.createElement("div");
         imagemBloco.className="bloco";
@@ -97,7 +101,8 @@ buscarlojas.addEventListener("click",async function(event) {
         var linhaBloco = document.createElement("div");
         linhaBloco.className="linha-horizontal";
         linhaBloco.appendChild(imagemBloco);
-        linhaBloco.appendChild(informacao);
+        linhaBloco.appendChild(informacaoTel);
+        linhaBloco.appendChild(informacaoCategoria);
 
         lojaUL.appendChild(linhaBloco);
 
