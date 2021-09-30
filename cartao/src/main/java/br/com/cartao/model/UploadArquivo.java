@@ -15,10 +15,10 @@ public class UploadArquivo {
 	
 
 	//@Value("${raiz}")
-	private String raiz = "/home/alysonsobrinho40/PlaySaude";
+	private String raiz = "/home/alysonsobrinho40";
 	
 	//@Value("${diretorio}")
-	private String diretorio = "/PlayFoto";
+	private String diretorio = "/PlaySaude";
 	
 
 	public void salvar(MultipartFile arquivo) {

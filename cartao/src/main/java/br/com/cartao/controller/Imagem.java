@@ -21,7 +21,8 @@ public class Imagem {
 	@GetMapping(value = "/{someID}", produces = MediaType.IMAGE_JPEG_VALUE)
 	public HttpEntity<byte[]> download(@PathVariable(value = "someID") String imagemNome) throws IOException {
 
-		byte[] arquivo = Files.readAllBytes(Paths.get("/home/alysonsobrinho40/PlaySaude/PlayFoto/"+imagemNome));
+		byte[] arquivo = Files.readAllBytes(Paths.get("/home/alysonsobrinho40/PlaySaude/"+imagemNome));
+		//
 
 		org.springframework.http.HttpHeaders httpHeaders = new org.springframework.http.HttpHeaders();
 
