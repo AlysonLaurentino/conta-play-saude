@@ -52,7 +52,7 @@ buscarlojas.addEventListener("click",async function(event) {
 
         var imagem = document.createElement("img");
         //imagem.src= "http://www.playsaude.com.br:8080/dawlond/"+loja.nomeFotoLogo;
-        imagem =  src="Playnasaude1.jpg";
+        imagem.src = "Playnasaude1.jpg";
 
         var informacao = document.createElement("div");
         informacao.className="bloco";
