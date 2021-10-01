@@ -61,8 +61,6 @@ for(var i = 0; i<form.categoria.length;i++){
 
     })
 
-    Console.log(form.categoria);
-    Console.log(form.categorias);
 }
 
     var parceriaOf = {
