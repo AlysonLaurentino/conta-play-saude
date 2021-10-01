@@ -64,9 +64,9 @@ for(var i = 0; i<form.categoria.length;i++){
 
     var parceriaOf = {
 
-                nomeFantasia: form.fantasia.value,
-                descricaoPromocao:form.descricaoPromo.value,
-                funcionamento:form.funcionamento.value,
+        nomeFantasia: form.fantasia.value,
+        funcionamento:form.funcionamento.value,
+        descricaoPromocao: form.descricaoPromo.value,
                
                 endereco: 
                     {
