@@ -86,7 +86,7 @@ buscarlojas.addEventListener("click",async function(event) {
              }
          })
 
-         informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
+         informacao.appendChild(montali("Categorias: "+todasCategorias.join(" | "), "servico"));
 
         var imagemBloco= document.createElement("div");
         imagemBloco.className="bloco";
