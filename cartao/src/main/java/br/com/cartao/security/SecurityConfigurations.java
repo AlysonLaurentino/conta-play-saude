@@ -47,10 +47,10 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers("/auth").permitAll()
 				.antMatchers("/login").permitAll()
-//				.antMatchers("/loja").permitAll()
-//                .antMatchers("/parceria").permitAll()
-//				.antMatchers("/dawlond").permitAll()
-//				.antMatchers("/dawlond/{someID}").permitAll()
+				.antMatchers("/loja").permitAll()
+                .antMatchers("/parceria").permitAll()
+				.antMatchers("/dawlond").permitAll()
+				.antMatchers("/dawlond/{someID}").permitAll()
 
 				
 				//// .and().csrf().disable().headers().frameOptions().disable()
