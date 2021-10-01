@@ -79,12 +79,13 @@ buscarlojas.addEventListener("click",async function(event) {
 
         // var todasCategorias = [];
 
-        // loja.categorias.forEach(categoria => {
+         loja.categorias.forEach(categoria => {
+             console.log(categoria);
 
         //     if(categoria!=null){
         //     todasCategorias.push(categoria);
         //     }
-        // })
+         })
 
         // informacao.appendChild(montali("Serviços: "+todasCategorias.join(" | "), "servico"));
 

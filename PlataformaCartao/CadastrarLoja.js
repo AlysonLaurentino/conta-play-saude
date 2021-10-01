@@ -58,6 +58,9 @@ function obtemLojaDoFormulario(form) {
             titulo:form.categoria[i].value,
     
         })
+
+        Console.log(form.categoria);
+        Console.log(form.categorias);
     }
     
     var loja = { 

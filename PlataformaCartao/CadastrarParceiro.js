@@ -57,8 +57,12 @@ for(var i = 0; i<form.categoria.length;i++){
     categorias.push({
 
         titulo:form.categoria[i].value,
+        
 
     })
+
+    Console.log(form.categoria);
+    Console.log(form.categorias);
 }
 
     var parceriaOf = {
