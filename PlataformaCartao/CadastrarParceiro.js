@@ -17,10 +17,11 @@ botaoEnviar.addEventListener("click",async function(event) {
  
 
     var formData =  new FormData();
-    formData.append("lojaForm", JSON.stringify(parceria));
+    formData.append("parceriaForm", JSON.stringify(parceria));
     formData.append("foto", foto);
+
     
-    fetch('http://www.playsaude.com.br:8080/loja', {
+    fetch('http://www.playsaude.com.br:8080/parceria', {
             method: 'POST',
             body: formData,
             headers: new Headers({
@@ -64,9 +65,9 @@ for(var i = 0; i<form.categoria.length;i++){
 
     var parceriaOf = {
 
-        nomeFantasia: form.fantasia.value,
-        funcionamento:form.funcionamento.value,
-        descricaoPromocao: form.descricaoPromo.value,
+                nomeFantasia: form.fantasia.value,
+                descricaoPromocao:form.descricaoPromocao.value,
+                funcionamento:form.funcionamento.value,
                
                 endereco: 
                     {

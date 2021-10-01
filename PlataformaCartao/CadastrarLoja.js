@@ -36,7 +36,7 @@ botaoEnviar.addEventListener("click",async function(event) {
         })
         .then(data => alert(data))
 
-    
+        form.reset();
     });
 
 function obtemLojaDoFormulario(form) {
@@ -58,6 +58,7 @@ function obtemLojaDoFormulario(form) {
             titulo:form.categoria[i].value,
     
         })
+
     }
     
     var loja = { 
