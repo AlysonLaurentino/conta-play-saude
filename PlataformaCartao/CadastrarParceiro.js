@@ -19,9 +19,8 @@ botaoEnviar.addEventListener("click",async function(event) {
     var formData =  new FormData();
     formData.append("parceriaForm", JSON.stringify(parceria));
     formData.append("foto", foto);
-
     
-    fetch('http://www.playsaude.com.br:8080/parceria', {
+    fetch('http://www.playsaude.com.br:8080/loja', {
             method: 'POST',
             body: formData,
             headers: new Headers({
