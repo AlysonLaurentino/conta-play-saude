@@ -80,10 +80,9 @@ buscarlojas.addEventListener("click",async function(event) {
          var todasCategorias = [];
 
          loja.categorias.forEach(categoria => {
-             console.log(categoria);
 
             if(categoria!=null){
-             todasCategorias.push(categoria);
+             todasCategorias.push(categoria.titulo);
              }
          })
 
