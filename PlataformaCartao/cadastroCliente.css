@@ -51,7 +51,7 @@ form#form-adiciona fieldset.active{
 
 .caixa{
   position: relative;
-  width: 940px;
+  width: 1200px;
   margin: 0px auto;
 }
 
@@ -75,7 +75,7 @@ nav a{
   text-transform: uppercase;
   color:white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
   text-decoration: none;
 }
 
