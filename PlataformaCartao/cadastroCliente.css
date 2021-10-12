@@ -51,12 +51,12 @@ form#form-adiciona fieldset.active{
 
 .caixa{
   position: relative;
-  width: 1200px;
+  width: 940px;
   margin: 0px auto;
 }
 
 h1 .imgLogo{
-	width: 150px;
+	width: 100px;
 	border-radius: 1em;
 }
 
