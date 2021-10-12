@@ -51,7 +51,7 @@ form#form-adiciona fieldset.active{
 
 .caixa{
   position: relative;
-  width: 940px;
+  width: 900px;
   margin: 0px auto;
 }
 
@@ -68,7 +68,7 @@ nav{
 
 nav li {
   display: inline;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 10px;
 }
 
 nav a{
