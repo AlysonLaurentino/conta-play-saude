@@ -15,8 +15,8 @@ public class Usuario {
 	private Long id;
 	@OneToOne(cascade = CascadeType.PERSIST)
 	Pessoa Pessoa;
-	@OneToOne(cascade = CascadeType.PERSIST)
-	private FinanceiroDoCliente financeiroCliente;
+//	@OneToOne(cascade = CascadeType.PERSIST)
+//	private FinanceiroDoCliente financeiroCliente;
 	@OneToOne(cascade = CascadeType.PERSIST)
 	private PlanoPaciente planoAtual;
 
@@ -26,7 +26,7 @@ public class Usuario {
 
 	public Usuario(Pessoa pessoa) {
 		Pessoa = pessoa;
-		this.financeiroCliente = new FinanceiroDoCliente();
+		// this.financeiroCliente = new FinanceiroDoCliente();
 		// this.planoAtual = planoAtual;
 	}
 
@@ -44,14 +44,6 @@ public class Usuario {
 
 	public void setPessoa(Pessoa pessoa) {
 		Pessoa = pessoa;
-	}
-
-	public FinanceiroDoCliente getFinnceiroCliente() {
-		return financeiroCliente;
-	}
-
-	public void setFinnceiroCliente(FinanceiroDoCliente finnceiroCliente) {
-		this.financeiroCliente = finnceiroCliente;
 	}
 
 	public PlanoPaciente getPlanoAtual() {

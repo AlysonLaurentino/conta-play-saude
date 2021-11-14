@@ -11,14 +11,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Entity
+
 public class FinanceiroDoCliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@OneToMany(cascade = CascadeType.PERSIST)
-	private List<VendaPlano> vendas = new ArrayList<VendaPlano>();
+	private List<VendaPlano> vendas;
 
 	public FinanceiroDoCliente() {
 
