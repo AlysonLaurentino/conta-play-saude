@@ -34,7 +34,7 @@ public class Pedido {
 		CodClinica = codClinica;
 		CodVendedor = codVendedor;
 		this.cliente = cliente;
-		cliente.getFinanceiro().adicionaPedido(this);
+		//cliente.getFinanceiro().adicionaPedido(this);
 	}
 
 

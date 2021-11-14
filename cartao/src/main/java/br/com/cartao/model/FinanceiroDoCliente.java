@@ -12,20 +12,27 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class FinanceiroDoCliente {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@OneToMany(cascade = CascadeType.PERSIST)
-	private List<Pedido> pedidos = new ArrayList<Pedido>();
-	
-	public void adicionaPedido(Pedido pedido) {
-		pedidos.add(pedido);
+	private List<VendaPlano> vendas = new ArrayList<VendaPlano>();
+
+	public FinanceiroDoCliente() {
+
 	}
-	
-	public void pagarPedido(Pedido pedido, ClienteFinal cliente){
-		pedido.setStatusPagamento(StatusPagamento.PAGO);
-		
+
+	public List<VendaPlano> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(List<VendaPlano> vendas) {
+		this.vendas = vendas;
+	}
+
+	public Long getId() {
+		return id;
 	}
 
 }

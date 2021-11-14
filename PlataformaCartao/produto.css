@@ -1,11 +1,4 @@
-body{
-  font-family: 'Montserrat', sans-serif;  
-}
 
-header{
-    background: #BBBBBB;
-    padding: 20px 0;
-}
 .caixa{
     position: relative;
     width: 940px;
@@ -40,6 +33,13 @@ nav a:hover {
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
+}
+
+#imgPlay{
+    width: 100%;
+    height: 100%;
+    
+
 }
 
 .produtos li{
@@ -83,11 +83,6 @@ nav a:hover {
     margin-top: 10px ;
 }
 
-footer{
-    text-align: center;
-    background: url("bg.jpg");
-    padding: 40px 0;
-}
 
 .copyright{
     color:#FFFFFF;
@@ -265,11 +260,7 @@ td,th{
 }
 
 
-.video{
-    width: 560px;
-    margin: 2em auto ;
 
-}
 
 @media screen and (max-width : 480px){
 

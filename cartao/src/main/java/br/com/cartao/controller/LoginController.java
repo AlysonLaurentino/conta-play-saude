@@ -40,18 +40,20 @@ public class LoginController {
 		return login;
 
 	}
-
-	@PostMapping
-	@Transactional
-	public ResponseEntity<Login> Cadastar(@RequestBody LoginForm form, UriComponentsBuilder uribuilBuilder) {
-
-		Login login = form.converter();
-
-		loginRepository.save(login);
-
-		URI uri = uribuilBuilder.path("/loja/{id}").buildAndExpand(login.getId()).toUri();
-		return ResponseEntity.created(uri).body(login);
-	}
+	/*
+	 * @PostMapping
+	 * 
+	 * @Transactional public ResponseEntity<Login> Cadastar(@RequestBody ListaForm
+	 * form, UriComponentsBuilder uribuilBuilder) {
+	 * 
+	 * Login login = form.converter();
+	 * 
+	 * loginRepository.save(login);
+	 * 
+	 * URI uri =
+	 * uribuilBuilder.path("/loja/{id}").buildAndExpand(login.getId()).toUri();
+	 * return ResponseEntity.created(uri).body(login); }
+	 */
 
 	@PutMapping("/{id}")
 	@Transactional
