@@ -30,8 +30,6 @@ public class ClienteFinal {
 	@OneToOne(cascade = CascadeType.PERSIST)
 	private Login login;
 	@OneToOne(cascade = CascadeType.PERSIST)
-	private FinanceiroDoCliente financeiro;
-	@OneToOne(cascade = CascadeType.PERSIST)
 	private PlanoPaciente planoAtual;
 
 	// private List<DependentePet> dependentePet;
@@ -120,14 +118,6 @@ public class ClienteFinal {
 
 	public Long getId() {
 		return id;
-	}
-
-	public FinanceiroDoCliente getFinanceiro() {
-		return financeiro;
-	}
-
-	public void setFinanceiro(FinanceiroDoCliente financeiro) {
-		this.financeiro = financeiro;
 	}
 
 	public void setPlanoAtual(PlanoPaciente planoAtual) {
