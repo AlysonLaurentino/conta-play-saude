@@ -2,12 +2,12 @@ package br.com.cartao.model;
 
 import java.util.List;
 
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
@@ -20,8 +20,8 @@ public class VendaPlano {
 	private Plano plano;
 	private String CodClinica;
 	public String CodVendedor;
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	public Usuario usuario;
+//	@ManyToOne(cascade = CascadeType.PERSIST)
+//	public Usuario usuario;
 	private double total;
 	@OneToMany(cascade = CascadeType.PERSIST)
 	private List<Parcela> parcelas;
@@ -31,12 +31,12 @@ public class VendaPlano {
 
 	}
 
-	public VendaPlano(Long id, Plano plano, String codVendedor, Usuario usuario) {
+	public VendaPlano(Long id, Plano plano, String codVendedor) {
 		super();
 		this.id = id;
 		this.plano = plano;
 		CodVendedor = codVendedor;
-		this.usuario = usuario;
+		//this.usuario = usuario;
 	}
 
 //	public VendaPlano(Plano plano,Usuario usuario) {
@@ -90,14 +90,7 @@ public class VendaPlano {
 		CodVendedor = codVendedor;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-
+	
 	public double getTotal() {
 		return total;
 	}
