@@ -3,12 +3,14 @@ package br.com.cartao.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-
+@Entity
 public class VendaPlano {
 
 	@Id
@@ -21,6 +23,7 @@ public class VendaPlano {
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	public Usuario usuario;
 	private double total;
+	@OneToMany(cascade = CascadeType.PERSIST)
 	private List<Parcela> parcelas;
 	private StatusPagamento statusPagamento = StatusPagamento.EMABERTO;
 
