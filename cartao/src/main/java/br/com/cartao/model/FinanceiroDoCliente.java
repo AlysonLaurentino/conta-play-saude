@@ -17,7 +17,7 @@ public class FinanceiroDoCliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@ManyToMany(cascade = CascadeType.PERSIST)
+	@OneToMany(cascade = CascadeType.PERSIST)
 	private List<VendaPlano> vendas;
 
 	public FinanceiroDoCliente() {
