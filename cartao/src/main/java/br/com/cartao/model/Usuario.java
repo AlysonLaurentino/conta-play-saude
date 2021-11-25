@@ -15,8 +15,8 @@ public class Usuario {
 	private Long id;
 	@OneToOne(cascade = CascadeType.PERSIST)
 	Pessoa Pessoa;
-//	@OneToOne(cascade = CascadeType.PERSIST)
-//	private FinanceiroDoCliente financeiroCliente;
+	@OneToOne(cascade = CascadeType.PERSIST)
+	private FinanceiroDoCliente financeiroCliente;
 	@OneToOne(cascade = CascadeType.PERSIST)
 	private PlanoPaciente planoAtual;
 

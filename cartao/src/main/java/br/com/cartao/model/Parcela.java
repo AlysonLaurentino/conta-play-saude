@@ -1,9 +1,16 @@
 package br.com.cartao.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Parcela {
 
-	// @Id
-	// @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	int numeroParcela;
 	double valor;
 	StatusPagamento statusParcela = StatusPagamento.EMABERTO;
