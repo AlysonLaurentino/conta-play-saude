@@ -1,4 +1,4 @@
-package br.com.cartao.controller;
+package br.com.cartao.form;
 
 import java.util.Date;
 import java.util.List;

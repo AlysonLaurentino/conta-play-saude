@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import br.com.cartao.form.UsuarioForm;
 import br.com.cartao.model.Usuario;
 import br.com.cartao.repository.UsuarioRepository;
 

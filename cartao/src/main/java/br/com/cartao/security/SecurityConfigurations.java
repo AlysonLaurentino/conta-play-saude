@@ -53,7 +53,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 //				.antMatchers("/dawlond/{someID}").permitAll()
 
 				
-				//// .and().csrf().disable().headers().frameOptions().disable()
+				//.and().csrf().disable().headers().frameOptions().disable()
 				.anyRequest().authenticated().and().cors().and().csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, loginRepository),UsernamePasswordAuthenticationFilter.class);
